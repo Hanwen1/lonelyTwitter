@@ -51,6 +51,26 @@ public class TweetListTest extends ActivityInstrumentationTestCase2{
         assertTrue("'test' should start with 't'", "test".startsWith("t"));
     }
 
+    
+    public void testGetTweets(){
+        TweetList tweets = new TweetList();
+        Tweet tweet = new NormalTweet("test tweet");
+        tweets.add(tweet);
+        for(int i=0;i<tweets.getCount();i++) {
+            assertEquals(tweets.getTweet(i), tweets.gettweets().get(i));
+        }
+    }
+    public void testHasTweet(){
+        TweetList tweets = new TweetList();
+        Tweet tweet = new NormalTweet("test tweet");
+        tweets.add(tweet);
+        assertEquals(true,tweets.hasTweet(tweet));
+    }
 
-
+    public void testgetCount(){
+        TweetList tweets = new TweetList();
+        Tweet tweet = new NormalTweet("test tweet");
+        tweets.add(tweet);
+        assertEquals(1,tweets.getCount());
+    }
 }
