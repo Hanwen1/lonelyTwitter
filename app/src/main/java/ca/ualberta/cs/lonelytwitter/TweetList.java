@@ -25,11 +25,11 @@ public class TweetList {
     public Tweet getTweet(int index){
         return tweets.get(index);
     }
-/**
-    public Tweet getTweets(){
-        //return tweets;
+
+    public ArrayList getTweets(){
+        return tweets;
     }
-*/
+    
     public int getCount(){
         return tweets.size();
     }
